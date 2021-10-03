@@ -38,17 +38,17 @@ pipeline {
 
     stage('Certify QA') {
       steps {
-        when() {
-          branch 'dev'
-        }
-
         input 'Do you want to certify ?'
       }
     }
 
     stage('Deploy UAT') {
       steps {
-        echo 'Deploying to UAT'
+        when() {
+          branch 'dev'
+          echo 'Deploying to UAT'
+        }
+
       }
     }
 
