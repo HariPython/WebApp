@@ -40,9 +40,9 @@ pipeline {
       steps {
         when() {
           branch 'dev'
-          input 'Do you want to certify ?'
         }
 
+        input 'Do you want to certify ?'
       }
     }
 
