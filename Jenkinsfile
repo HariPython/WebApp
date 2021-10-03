@@ -38,7 +38,11 @@ pipeline {
 
     stage('Certify QA') {
       steps {
-        input 'Do you want to certify ?'
+        when() {
+          branch 'dev'
+          input 'Do you want to certify ?'
+        }
+
       }
     }
 
